@@ -13,7 +13,7 @@
   <link href="<?= base_url('assets2'); ?>/css/landing-page.css" rel="stylesheet" />
 
   <!--     Fonts and icons     -->
-  <link href="<?= base_url('assets2'); ?>/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
   <link href="<?= base_url('assets2'); ?>/css/pe-icon-7-stroke.css" rel="stylesheet" />
 </head>

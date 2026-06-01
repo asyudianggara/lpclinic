@@ -16,7 +16,29 @@
 <script src="<?= base_url('assets2'); ?>/js/jquery.easing.1.3.js" type="text/javascript"></script>
 <script src="<?= base_url('assets2'); ?>/js/bootstrap.js" type="text/javascript"></script>
 <script src="<?= base_url('assets2'); ?>/js/awesome-landing-page.js" type="text/javascript"></script>
-<script src="<?= base_url('assets2'); ?>/js/script.js" type="text/javascript">
+<script src="<?= base_url('assets2'); ?>/js/script.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  $(document).ready(function() {
+    $('.btn-logout').on('click', function(e) {
+      e.preventDefault();
+      var href = $(this).attr('href');
+      Swal.fire({
+        title: 'Yakin ingin keluar?',
+        text: "Sesi Anda akan diakhiri.",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3b82f6',
+        cancelButtonColor: '#ef4444',
+        confirmButtonText: 'Ya, Keluar!',
+        cancelButtonText: 'Batal'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = href;
+        }
+      });
+    });
+  });
 </script>
 
 </html>
