@@ -1,0 +1,14 @@
+Extract file
+import db
+sesuaikan dengan nama yang ada pada config->database
+letakkan pada document root
+
+Untuk demo online dapat diakses melalui link portfolio Anda.
+
+Admin:
+- User: admin
+- Pass: admin123
+
+Member:
+- User: user
+- Pass: user123
