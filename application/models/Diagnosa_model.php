@@ -55,24 +55,25 @@ class Diagnosa_model extends CI_model
 
   // Perhitungan tiap kerusakan
   // Perhitungan kerusakan 1
-  // Perhitungan Probabilitas tiap kerusakan yang ada di tmp_final
   public function ProbK1()
   {
     $this->db->select('*');
     $this->db->from('tmp_final');
     $this->db->where('id_kerusakan', 1);
     $prob = $this->db->get()->result();
-    //inisialisasi untuk total probabilitas
     $jumlah = 1;
     foreach ($prob as $pr) {
-      $jumlah = $jumlah * $pr->probabilitas;
+      $pVal = $pr->probabilitas;
+      if ($pVal <= 0) {
+        $pVal = 0.01;
+      }
+      $jumlah = $jumlah * $pVal;
     }
-    // Perhitungan hasil bayes kerusakan 1
-    // (Prob kerusakan di tmp_final * prob di tabel kerusakan)
     $this->db->select('*');
     $this->db->from('tbl_kerusakan');
     $this->db->where('id_kerusakan', 1);
     $data = $this->db->get()->result();
+    $hasilBayes = 0;
     foreach ($data as $rowku) {
       $hasilBayes = $jumlah * $rowku->probabilitas;
     }
@@ -80,24 +81,25 @@ class Diagnosa_model extends CI_model
   }
 
   // Perhitungan kerusakan 2
-  // Perhitungan Probabilitas tiap kerusakan yang ada di tmp_final
   public function ProbK2()
   {
     $this->db->select('*');
     $this->db->from('tmp_final');
     $this->db->where('id_kerusakan', 2);
     $prob = $this->db->get()->result();
-    //inisialisasi untuk total probabilitas
     $jumlah = 1;
     foreach ($prob as $pr) {
-      $jumlah = $jumlah * $pr->probabilitas;
+      $pVal = $pr->probabilitas;
+      if ($pVal <= 0) {
+        $pVal = 0.01;
+      }
+      $jumlah = $jumlah * $pVal;
     }
-    // Perhitungan hasil bayes kerusakan 2
-    // (Prob kerusakan di tmp_final * prob di tabel kerusakan)
     $this->db->select('*');
     $this->db->from('tbl_kerusakan');
     $this->db->where('id_kerusakan', 2);
     $data = $this->db->get()->result();
+    $hasilBayes = 0;
     foreach ($data as $rowku) {
       $hasilBayes = $jumlah * $rowku->probabilitas;
     }
@@ -105,24 +107,25 @@ class Diagnosa_model extends CI_model
   }
 
   // Perhitungan kerusakan 3
-  // Perhitungan Probabilitas tiap kerusakan yang ada di tmp_final
   public function ProbK3()
   {
     $this->db->select('*');
     $this->db->from('tmp_final');
     $this->db->where('id_kerusakan', 3);
     $prob = $this->db->get()->result();
-    //inisialisasi untuk total probabilitas
     $jumlah = 1;
     foreach ($prob as $pr) {
-      $jumlah = $jumlah * $pr->probabilitas;
+      $pVal = $pr->probabilitas;
+      if ($pVal <= 0) {
+        $pVal = 0.01;
+      }
+      $jumlah = $jumlah * $pVal;
     }
-    // Perhitungan hasil bayes kerusakan 3
-    // (Prob kerusakan di tmp_final * prob di tabel kerusakan)
     $this->db->select('*');
     $this->db->from('tbl_kerusakan');
     $this->db->where('id_kerusakan', 3);
     $data = $this->db->get()->result();
+    $hasilBayes = 0;
     foreach ($data as $rowku) {
       $hasilBayes = $jumlah * $rowku->probabilitas;
     }
@@ -130,56 +133,56 @@ class Diagnosa_model extends CI_model
   }
 
   // Perhitungan kerusakan 4
-  // Perhitungan Probabilitas tiap kerusakan yang ada di tmp_final
   public function ProbK4()
   {
     $this->db->select('*');
     $this->db->from('tmp_final');
     $this->db->where('id_kerusakan', 4);
     $prob = $this->db->get()->result();
-    //inisialisasi untuk total probabilitas
     $jumlah = 1;
     foreach ($prob as $pr) {
-      $jumlah = $jumlah * $pr->probabilitas;
+      $pVal = $pr->probabilitas;
+      if ($pVal <= 0) {
+        $pVal = 0.01;
+      }
+      $jumlah = $jumlah * $pVal;
     }
-    // Perhitungan hasil bayes kerusakan 4
-    // (Prob kerusakan di tmp_final * prob di tabel kerusakan)
     $this->db->select('*');
     $this->db->from('tbl_kerusakan');
     $this->db->where('id_kerusakan', 4);
     $data = $this->db->get()->result();
+    $hasilBayes = 0;
     foreach ($data as $rowku) {
       $hasilBayes = $jumlah * $rowku->probabilitas;
     }
     return $hasilBayes;
   }
 
-  // Perhitungan kerusakan 4
-  // Perhitungan Probabilitas tiap kerusakan yang ada di tmp_final
+  // Perhitungan kerusakan 5
   public function ProbK5()
   {
     $this->db->select('*');
     $this->db->from('tmp_final');
     $this->db->where('id_kerusakan', 5);
     $prob = $this->db->get()->result();
-    //inisialisasi untuk total probabilitas
     $jumlah = 1;
     foreach ($prob as $pr) {
-      $jumlah = $jumlah * $pr->probabilitas;
+      $pVal = $pr->probabilitas;
+      if ($pVal <= 0) {
+        $pVal = 0.01;
+      }
+      $jumlah = $jumlah * $pVal;
     }
-    // Perhitungan hasil bayes kerusakan 5
-    // (Prob kerusakan di tmp_final * prob di tabel kerusakan)
     $this->db->select('*');
     $this->db->from('tbl_kerusakan');
     $this->db->where('id_kerusakan', 5);
     $data = $this->db->get()->result();
+    $hasilBayes = 0;
     foreach ($data as $rowku) {
       $hasilBayes = $jumlah * $rowku->probabilitas;
     }
     return $hasilBayes;
   }
-  // End Perhitungan tiap kerusakan
-
 
   // Update Hasil Probabilitas pada tmp_final
   public function hasilProbK1($K1)

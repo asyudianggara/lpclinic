@@ -17,10 +17,37 @@
   <link href="<?= base_url('assets2'); ?>/css/font-awesome.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
   <link href="<?= base_url('assets2'); ?>/css/pe-icon-7-stroke.css" rel="stylesheet" />
+<style>
+  .navbar-top, nav.navbar { 
+    background-color: #ffffff !important; 
+    border-bottom: 1px solid #e2e8f0 !important; 
+    transition: all 0.3s ease;
+  }
+  .navbar-top .navbar-nav>li>a, nav.navbar .navbar-nav>li>a { 
+    color: #2563eb !important; 
+    font-weight: 600 !important; 
+    opacity: 1 !important; 
+    transition: all 0.2s ease;
+  }
+  .navbar-top .navbar-nav>li>a:hover, nav.navbar .navbar-nav>li>a:hover { 
+    color: #1d4ed8 !important; 
+  }
+  .logo-container .brand { 
+    color: #1e3c72 !important; 
+    font-weight: 700 !important; 
+    transition: all 0.2s ease;
+  }
+  .navbar-header a:hover .brand, .navbar-header a:focus .brand {
+    color: #2563eb !important;
+  }
+  .navbar-header a { 
+    text-decoration: none !important; 
+  }
+</style>
 </head>
 
 <body class="landing-page landing-page2">
-  <nav class="navbar  navbar-top" role="navigation">
+  <nav class="navbar navbar-top" role="navigation" style="background-color: #1e3c72; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -36,7 +63,7 @@
             <div class="logo">
               <img src="<?= base_url('assets2'); ?>/img/asgardev_logo.png" alt="ASGARDEV Laptop Clinic" style="border-radius: 4px; object-fit: cover;">
             </div>
-            <div class="brand" style="text-transform: none; font-size: 15px; font-weight: 700; line-height: 1.2; padding-top: 5px;">
+            <div class="brand" style="text-transform: none; font-size: 15px; font-weight: 700; line-height: 1.2; padding-top: 5px; color: #1e3c72 !important;">
               ASGARDEV <br>Laptop Clinic
             </div>
           </div>

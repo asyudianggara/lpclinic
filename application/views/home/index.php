@@ -14,7 +14,7 @@
 						<div class="logo">
 							<img src="<?= base_url('assets2'); ?>/img/asgardev_logo.png" alt="ASGARDEV Laptop Clinic" style="border-radius: 4px; object-fit: cover;">
 						</div>
-						<div class="brand" style="text-transform: none; font-size: 15px; font-weight: 700; line-height: 1.2; padding-top: 5px;">
+						<div class="brand" style="text-transform: none; font-size: 15px; font-weight: 700; line-height: 1.2; padding-top: 5px; color: #1e3c72 !important;">
 							ASGARDEV <br>Laptop Clinic
 						</div>
 					</div>
