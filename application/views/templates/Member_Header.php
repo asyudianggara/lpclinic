@@ -19,29 +19,32 @@
   <link href="<?= base_url('assets2'); ?>/css/pe-icon-7-stroke.css" rel="stylesheet" />
 <style>
   .navbar-top, nav.navbar { 
-    background-color: #ffffff !important; 
-    border-bottom: 1px solid #e2e8f0 !important; 
+    background-color: #1e3c72 !important; 
+    border-bottom: none !important; 
     transition: all 0.3s ease;
   }
   .navbar-top .navbar-nav>li>a, nav.navbar .navbar-nav>li>a { 
-    color: #2563eb !important; 
+    color: rgba(255, 255, 255, 0.85) !important; 
     font-weight: 600 !important; 
     opacity: 1 !important; 
     transition: all 0.2s ease;
   }
   .navbar-top .navbar-nav>li>a:hover, nav.navbar .navbar-nav>li>a:hover { 
-    color: #1d4ed8 !important; 
+    color: #ffffff !important; 
   }
   .logo-container .brand { 
-    color: #1e3c72 !important; 
+    color: #ffffff !important; 
     font-weight: 700 !important; 
     transition: all 0.2s ease;
   }
   .navbar-header a:hover .brand, .navbar-header a:focus .brand {
-    color: #2563eb !important;
+    color: #ffffff !important;
   }
   .navbar-header a { 
     text-decoration: none !important; 
+  }
+  .navbar-toggle .icon-bar {
+    background-color: #ffffff !important;
   }
 </style>
 </head>
@@ -57,13 +60,13 @@
           <span class="icon-bar bar2"></span>
           <span class="icon-bar bar3"></span>
         </button>
-        <a href="#home">
+        <a href="<?= base_url('member/index'); ?>">
           <!-- Navbar Judul Pojok Kiri -->
           <div class="logo-container">
             <div class="logo">
               <img src="<?= base_url('assets2'); ?>/img/asgardev_logo.png" alt="ASGARDEV Laptop Clinic" style="border-radius: 4px; object-fit: cover;">
             </div>
-            <div class="brand" style="text-transform: none; font-size: 15px; font-weight: 700; line-height: 1.2; padding-top: 5px; color: #1e3c72 !important;">
+            <div class="brand" style="text-transform: none; font-size: 15px; font-weight: 700; line-height: 1.2; padding-top: 5px; color: #ffffff !important;">
               ASGARDEV <br>Laptop Clinic
             </div>
           </div>
