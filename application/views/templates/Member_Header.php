@@ -32,9 +32,41 @@
   .navbar-top .navbar-nav>li>a:hover, nav.navbar .navbar-nav>li>a:hover { 
     color: #ffffff !important; 
   }
+  .logo-container {
+    display: flex !important;
+    align-items: center !important;
+    margin-top: 5px !important;
+    height: auto !important;
+  }
+  .logo-container .logo {
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #fff !important;
+    flex-shrink: 0 !important;
+    float: none !important;
+  }
+  .logo-container .logo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
   .logo-container .brand { 
     color: #ffffff !important; 
     font-weight: 700 !important; 
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+    margin-left: 12px !important;
+    margin-top: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    float: none !important;
+    text-transform: none !important;
     transition: all 0.2s ease;
   }
   .navbar-header a:hover .brand, .navbar-header a:focus .brand {
@@ -66,7 +98,7 @@
             <div class="logo">
               <img src="<?= base_url('assets2'); ?>/img/asgardev_logo.png" alt="ASGARDEV Laptop Clinic" style="border-radius: 4px; object-fit: cover;">
             </div>
-            <div class="brand" style="text-transform: none; font-size: 15px; font-weight: 700; line-height: 1.2; padding-top: 5px; color: #ffffff !important;">
+            <div class="brand" style="text-transform: none; font-size: 15px; font-weight: 700; line-height: 1.2; padding-top: 5px;">
               ASGARDEV <br>Laptop Clinic
             </div>
           </div>
