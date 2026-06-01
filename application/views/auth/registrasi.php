@@ -112,9 +112,14 @@
   <div>
     <div class="login_wrapper">
       <div id="register" class="login_content">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <a href="<?= base_url('home'); ?>">
+            <img src="<?= base_url('assets2/img/asgardev_logo.png'); ?>" alt="ASGARDEV Logo" style="width: 70px; height: 70px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.15); border: 2px solid #2563eb; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </a>
+        </div>
         <form method="post" action="<?= base_url('auth/registrasi') ?>">
           <h1>Buat Akun</h1>
-          <p style="color: #64748b; margin-bottom: 25px;">Mulai diagnosa kerusakan komputer Anda</p>
+          <p style="color: #64748b; margin-bottom: 25px;">Mulai diagnosa kerusakan laptop Anda</p>
           
           <div style="margin-bottom: 15px; text-align: left;">
             <input type="text" class="form-control" placeholder="Masukkan Nama Anda" id="nama" name="nama" />
@@ -146,9 +151,9 @@
 
             <div>
               <a href="<?= base_url('home'); ?>" style="text-decoration: none;">
-                <h1 style="margin-top: 15px !important;"><i class="fa fa-desktop"></i> ES Komputer</h1>
+                <h1 style="margin-top: 15px !important;"><i class="fa fa-stethoscope"></i> ASGARDEV Laptop Clinic</h1>
               </a>
-              <p>&copy; 2019-2026 Sistem Pakar Diagnosa Kerusakan Komputer. Developed by ASGARDEV.</p>
+              <p>&copy; 2019-2026 Sistem Pakar Diagnosa Kerusakan Laptop. Developed by ASGARDEV.</p>
             </div>
           </div>
         </form>
