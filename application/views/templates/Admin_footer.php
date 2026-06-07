@@ -1,9 +1,10 @@
 <!-- footer content -->
 <footer>
-  <div class="pull-right">
-    <h6><i class="fa fa-desktop"></i> ES Komputer</h6>
-    <p><strong>Developed by ASGARDEV</strong></p>
-    <p>&copy; 2019-2026 Sistem Pakar Diagnosa Kerusakan Komputer. Portfolio demo by ASGARDEV.</p>
+  <div class="pull-right" style="text-align: right; padding: 10px 0;">
+    <h6 style="margin: 0; font-size: 14px; font-weight: 700; color: #1e293b;"><i class="fa fa-stethoscope" style="color: #3b82f6;"></i> ASGARDEV Laptop Clinic</h6>
+    <p style="margin: 5px 0 0 0; font-size: 13px; color: #64748b;">
+      &copy; 2019-2026 Sistem Pakar Diagnosa Kerusakan Komputer.<br>Developed by <strong>ASGARDEV</strong>.
+    </p>
   </div>
   <div class="clearfix"></div>
 </footer>
