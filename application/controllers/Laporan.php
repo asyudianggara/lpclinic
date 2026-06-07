@@ -38,12 +38,19 @@ class Laporan extends CI_Controller
   // Hapus Laporan Massal
   public function hapus_massal()
   {
-    $ids = $this->input->post('id_hasil');
-    if (!empty($ids)) {
+    $ids_raw = $this->input->post('ids');
+    if (!empty($ids_raw)) {
+      $ids = explode(',', $ids_raw);
       $this->ML->hapusLaporanMassal($ids);
       $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">' . count($ids) . ' Data Laporan Berhasil dihapus massal!</div>');
     } else {
-      $this->session->set_flashdata('pesan', '<div class="alert alert-warning" role="alert">Tidak ada data laporan yang dipilih!</div>');
+      $ids = $this->input->post('id_hasil');
+      if (!empty($ids)) {
+        $this->ML->hapusLaporanMassal($ids);
+        $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">' . count($ids) . ' Data Laporan Berhasil dihapus massal!</div>');
+      } else {
+        $this->session->set_flashdata('pesan', '<div class="alert alert-warning" role="alert">Tidak ada data laporan yang dipilih!</div>');
+      }
     }
     redirect('laporan');
   }

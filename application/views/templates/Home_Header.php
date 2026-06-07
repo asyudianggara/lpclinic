@@ -16,6 +16,33 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
   <link href="<?= base_url('assets2'); ?>/css/pe-icon-7-stroke.css" rel="stylesheet" />
+  
+  <style>
+    /* Custom Modern Alerts by ASGARDEV */
+    .alert {
+      border-radius: 8px !important;
+      border: none !important;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important;
+      padding: 15px 20px !important;
+      font-weight: 500 !important;
+    }
+    .alert-success {
+      background-color: #d1fae5 !important;
+      color: #065f46 !important;
+    }
+    .alert-danger {
+      background-color: #fee2e2 !important;
+      color: #991b1b !important;
+    }
+    .alert-info {
+      background-color: #e0f2fe !important;
+      color: #075985 !important;
+    }
+    .alert-warning {
+      background-color: #fef3c7 !important;
+      color: #92400e !important;
+    }
+  </style>
 </head>
 
 <body class="landing-page landing-page2">
