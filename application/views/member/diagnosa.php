@@ -118,6 +118,7 @@
           <?php if($this->session->flashdata('pesan')): ?>
             <div style="margin-bottom: 30px;">
               <?= $this->session->flashdata('pesan'); ?>
+              <?php $this->session->unset_userdata('pesan'); ?>
             </div>
           <?php endif; ?>
 

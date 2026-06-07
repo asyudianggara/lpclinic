@@ -26,6 +26,7 @@
                   </div>
 
                   <?= $this->session->flashdata('pesan'); ?>
+                  <?php $this->session->unset_userdata('pesan'); ?>
                   <table id="datatable" class="table table-striped table-bordered table-hover">
                     <thead>
                       <tr style="background-color: #f5f7fa; color: #2c3e50;">

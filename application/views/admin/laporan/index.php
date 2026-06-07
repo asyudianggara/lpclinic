@@ -19,6 +19,7 @@
                 <div class="x_content">
                   
                   <?= $this->session->flashdata('pesan'); ?>
+                  <?php $this->session->unset_userdata('pesan'); ?>
 
                   <!-- Separate Hidden Form for Bulk Delete -->
                   <form id="formHapusMassal" action="<?= base_url('laporan/hapus_massal'); ?>" method="post" style="display: none;">

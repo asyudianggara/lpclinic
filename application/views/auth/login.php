@@ -148,6 +148,7 @@
           <p style="color: #64748b; margin-bottom: 25px;">Portfolio demo by <strong>ASGARDEV</strong></p>
 
           <?= $this->session->flashdata('pesan'); ?>
+          <?php $this->session->unset_userdata('pesan'); ?>
           <div style="margin-bottom: 15px; text-align: left;">
             <input type="text" class="form-control" placeholder="Username" name="username" />
             <small class="text-danger" style="margin-top: 5px; display: block;"><?= form_error('username'); ?></small>
