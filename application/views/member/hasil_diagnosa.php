@@ -151,7 +151,7 @@
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav nav ml-auto">
           <li class="nav-item"><a href="<?= base_url('member/index'); ?>" class="nav-link" style="color: rgba(255,255,255,0.8) !important;"><span>Home</span></a></li>
-          <li class="nav-item"><a href="#" class="nav-link" style="color: rgba(255,255,255,0.8) !important;"><span><i class="fa fa-user"></i> <?= $user['nama_user']; ?></span></a></li>
+          <li class="nav-item"><a href="<?= base_url('member/profile'); ?>" class="nav-link" style="color: rgba(255,255,255,0.8) !important;"><span><i class="fa fa-user"></i> <?= $user['nama_user']; ?></span></a></li>
           <li class="nav-item"><a href="<?= base_url('auth/logout'); ?>" class="nav-link btn-logout" style="color: rgba(255,255,255,0.8) !important;"><span>Logout</span></a></li>
         </ul>
       </div>

@@ -141,7 +141,7 @@
             </a>
           </li>
           <li>
-            <a class="page-scroll" href="#">
+            <a href="<?= base_url('member/profile'); ?>">
               <i class="fa fa-user"></i>
               <?= $user['nama_user']; ?>
             </a>
