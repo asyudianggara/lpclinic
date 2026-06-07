@@ -26,4 +26,25 @@ class Laporan extends CI_Controller
     $this->load->view('admin/laporan/index', $data);
     $this->load->view('templates/Admin_footer');
   }
+
+  // Hapus Laporan Individual
+  public function hapus($id)
+  {
+    $this->ML->hapusLaporan($id);
+    $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">Data Laporan Berhasil dihapus!</div>');
+    redirect('laporan');
+  }
+
+  // Hapus Laporan Massal
+  public function hapus_massal()
+  {
+    $ids = $this->input->post('id_hasil');
+    if (!empty($ids)) {
+      $this->ML->hapusLaporanMassal($ids);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">' . count($ids) . ' Data Laporan Berhasil dihapus massal!</div>');
+    } else {
+      $this->session->set_flashdata('pesan', '<div class="alert alert-warning" role="alert">Tidak ada data laporan yang dipilih!</div>');
+    }
+    redirect('laporan');
+  }
 }
